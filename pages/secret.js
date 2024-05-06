@@ -17,7 +17,7 @@ const secret = () => {
         {user !== null ? (
           <>
             <Typography className="text-2xl text-red-600 mb-5 font-bold">
-              SECRET !{" "}
+              Information !{" "}
             </Typography>
             <div className="flex flex-col items-start bg-yellow-200 p-5 rounded-2xl">
               <div className="flex mt-5">

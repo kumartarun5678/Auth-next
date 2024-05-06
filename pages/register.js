@@ -62,7 +62,7 @@ const register = () => {
     <>
       <div>
         <Head>
-          <title>Register | AUTHY</title>
+          <title>Register | TARUNauth</title>
         </Head>
         <Container component="main" maxWidth="xs">
           <Box className="mt-5 flex flex-col items-center">
