@@ -55,7 +55,7 @@ const DrawerComp = () => {
                   <ListItemIcon>
                     <Key className="text-red-500" />
                   </ListItemIcon>
-                  <ListItemText primary="Secret !" className="text-white" />
+                  <ListItemText primary="Info" className="text-white" />
                 </ListItemButton>
               </div>
             </Link>
