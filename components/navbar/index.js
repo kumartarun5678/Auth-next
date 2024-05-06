@@ -30,60 +30,57 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" style={{ background: "#cbc0c0", display: "flex", flexDirection: "row", alignItems: "center" }}>
-      <Toolbar className="flex">
-        <Link href={"/"}>
-          <div>
+    <>
+      <AppBar position="static" className="bg-[#cbc0c0]">
+        <Toolbar className="flex justify-between">
+          <Link href={"/"}>
             <Typography
               variant="h4"
-              className="font-bold text-gray-800 italic"
+              className="font-bold text-gray-800  italic cursor-pointer"
             >
-              <span className="text-white">Tarun</span>Auth
+              <span className="text-white">TARUN</span>auth
             </Typography>
-          </div>
-        </Link>
-        {isMatch ? (
-          <DrawerComp />
-        ) : (
-          <div className="flex text-white ml-auto">
-            <Link href={"/secret"}>
-              <Typography className="font-semibold text-red-900 text-xl tracking-widest mr-6">
-                Secret!
-              </Typography>
-            </Link>
+          </Link>
+          {isMatch ? (
+            <DrawerComp />
+          ) : (
+            <>
+              <div className="flex text-white">
+                <Link href={"/secret"}>
+                  <Typography className="font-semibold text-red-900 text-xl tracking-widest cursor-pointer">
+                    Info
+                  </Typography>
+                </Link>
 
-            {user !== null ? (
-              <Typography
-                variant="h6"
-                className="font-semibold cursor-pointer"
-                onClick={logoutHandler}
-              >
-                Logout
-              </Typography>
-            ) : (
-              <>
-                <Link href={"/login"}>
-                  <Typography
-                    variant="h6"
-                    className="font-semibold cursor-pointer mr-6"
-                  >
-                    Login
-                  </Typography>
-                </Link>
-                <Link href={"/register"}>
-                  <Typography
-                    variant="h6"
-                    className="font-semibold cursor-pointer"
-                  >
-                    Register
-                  </Typography>
-                </Link>
-              </>
-            )}
-          </div>
-        )}
-      </Toolbar>
-    </AppBar>
+                {user !== null ? (
+                  <>
+                    <Typography
+                      className="font-semibold cursor-pointer ml-6"
+                      onClick={logoutHandler}
+                    >
+                      Logout
+                    </Typography>
+                  </>
+                ) : (
+                  <>
+                    <Link href={"/login"}>
+                      <Typography className="font-semibold cursor-pointer ml-6">
+                        Login
+                      </Typography>
+                    </Link>
+                    <Link href={"/register"}>
+                      <Typography className="font-semibold cursor-pointer ml-6">
+                        Register
+                      </Typography>
+                    </Link>
+                  </>
+                )}
+              </div>
+            </>
+          )}
+        </Toolbar>
+      </AppBar>
+    </>
   );
 };
 
